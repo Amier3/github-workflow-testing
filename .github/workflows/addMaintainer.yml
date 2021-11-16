@@ -21,7 +21,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Label Maintainer 
         if: |
-          steps.is_organization_member.outputs.result == true
+          steps.is_organization_member.outputs.result == false
         uses: andymckay/labeler@master
         with:
           add-labels: "Maintainer"
