@@ -25,3 +25,9 @@ jobs:
         uses: andymckay/labeler@master
         with:
           add-labels: "Maintainer"
+      - name: Label Maintainer 
+        if: |
+          steps.is_organization_member.outputs.result == true
+        uses: andymckay/labeler@master
+        with:
+          add-labels: "Maintainer
